@@ -1,0 +1,33 @@
+package com.ruiqin.customview.module.home;
+
+import com.ruiqin.customview.module.home.adapter.MainRecyclerAdapter;
+import com.ruiqin.customview.module.home.bean.MainRecyclerData;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by ruiqin.shen
+ * 类说明：
+ */
+
+public class MainPresenter extends MainContract.Presenter {
+
+    private MainRecyclerAdapter mainRecyclerAdapter;
+    private List<MainRecyclerData> mMainRecyclerDataList = new ArrayList<>();
+
+    @Override
+    void setAdapter() {
+        mMainRecyclerDataList.clear();
+        List<MainRecyclerData> recyclerDataList = mModel.initData();//获取数据
+        for (MainRecyclerData mainRecyclerData : recyclerDataList) {
+            mMainRecyclerDataList.add(mainRecyclerData);
+        }
+        if (mainRecyclerAdapter == null) {
+            mainRecyclerAdapter = new MainRecyclerAdapter(mMainRecyclerDataList);
+            mView.setRecyclerAdapterSuccess(mainRecyclerAdapter);
+        } else {
+            mainRecyclerAdapter.notifyDataSetChanged();
+        }
+    }
+}
