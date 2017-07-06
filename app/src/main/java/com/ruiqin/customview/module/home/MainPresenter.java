@@ -18,16 +18,23 @@ public class MainPresenter extends MainContract.Presenter {
 
     @Override
     void setAdapter() {
-        mMainRecyclerDataList.clear();
-        List<MainRecyclerData> recyclerDataList = mModel.initData();//获取数据
-        for (MainRecyclerData mainRecyclerData : recyclerDataList) {
-            mMainRecyclerDataList.add(mainRecyclerData);
-        }
+        initData();
         if (mainRecyclerAdapter == null) {
             mainRecyclerAdapter = new MainRecyclerAdapter(mMainRecyclerDataList);
             mView.setRecyclerAdapterSuccess(mainRecyclerAdapter);
         } else {
             mainRecyclerAdapter.notifyDataSetChanged();
+        }
+    }
+
+    /**
+     * 复制
+     */
+    private void initData() {
+        List<MainRecyclerData> recyclerDataList = mModel.initData();
+        if (recyclerDataList != null) {
+            mMainRecyclerDataList.clear();
+            mMainRecyclerDataList.addAll(recyclerDataList);
         }
     }
 }

@@ -11,7 +11,6 @@ import com.ruiqin.customview.module.home.adapter.MainRecyclerAdapter;
 import com.ruiqin.customview.util.ToastUtils;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity<MainPresenter, MainModel> implements MainContract.View {
 
@@ -53,11 +52,5 @@ public class MainActivity extends BaseActivity<MainPresenter, MainModel> impleme
         } else {
             super.onBackPressed();
         }
-    }
-
-
-    @OnClick(R.id.btn_click)
-    public void onClick() {
-        mPresenter.setAdapter();
     }
 }
