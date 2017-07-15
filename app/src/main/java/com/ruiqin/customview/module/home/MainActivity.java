@@ -7,10 +7,15 @@ import android.support.v7.widget.RecyclerView;
 
 import com.ruiqin.customview.R;
 import com.ruiqin.customview.base.BaseActivity;
+import com.ruiqin.customview.module.TestActivity;
 import com.ruiqin.customview.module.home.adapter.MainRecyclerAdapter;
+import com.ruiqin.customview.util.LogUtils;
 import com.ruiqin.customview.util.ToastUtils;
 
+import java.util.ArrayList;
+
 import butterknife.BindView;
+import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity<MainPresenter, MainModel> implements MainContract.View {
 
@@ -52,5 +57,10 @@ public class MainActivity extends BaseActivity<MainPresenter, MainModel> impleme
         } else {
             super.onBackPressed();
         }
+    }
+
+    @OnClick(R.id.btn_test)
+    public void onClick() {
+        startActivity(TestActivity.newIntent(mContext));
     }
 }

@@ -19,6 +19,14 @@
         </activity>
         <activity android:name=".module.dialog.DialogActivity">
         </activity>
+        <activity android:name=".module.TestActivity">
+        </activity>
+        <activity android:name=".module.elevation.ElevationActivity">
+        </activity>
+        <activity android:name=".module.elevation.framelayout.FrameLayoutActivity">
+        </activity>
+        <activity android:name=".module.elevation.cardview.CardViewActivity">
+        </activity>
     </application>
 
 </manifest>
