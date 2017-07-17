@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".module.elevation.cardview.CardViewActivity">
         </activity>
+        <activity android:name=".module.textview.TextViewActivity">
+        </activity>
     </application>
 
 </manifest>
