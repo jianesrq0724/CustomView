@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.ruiqin.customview">
 
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -28,6 +30,8 @@
         <activity android:name=".module.elevation.cardview.CardViewActivity">
         </activity>
         <activity android:name=".module.viewflipper.ViewFlipperActivity">
+        </activity>
+        <activity android:name=".module.contacts.ContactsActivity">
         </activity>
     </application>
 
