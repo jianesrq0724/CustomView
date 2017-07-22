@@ -4,6 +4,7 @@ import com.ruiqin.customview.module.contacts.ContactsActivity;
 import com.ruiqin.customview.module.dialog.DialogActivity;
 import com.ruiqin.customview.module.elevation.ElevationActivity;
 import com.ruiqin.customview.module.home.bean.MainRecyclerData;
+import com.ruiqin.customview.module.scroll.ScrollActivity;
 import com.ruiqin.customview.module.viewflipper.ViewFlipperActivity;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class MainModel implements MainContract.Model {
         recyclerDataList.add(new MainRecyclerData("FrameLayout", ElevationActivity.class));
         recyclerDataList.add(new MainRecyclerData("ViewFlipperActivity", ViewFlipperActivity.class));
         recyclerDataList.add(new MainRecyclerData("ContactsActivity", ContactsActivity.class));
+        recyclerDataList.add(new MainRecyclerData("ScrollActivity", ScrollActivity.class));
         return recyclerDataList;
     }
 }
