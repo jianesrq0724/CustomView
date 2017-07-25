@@ -19,14 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".module.dialog.DialogActivity"></activity>
-        <activity android:name=".module.TestActivity"></activity>
-        <activity android:name=".module.elevation.ElevationActivity"></activity>
-        <activity android:name=".module.elevation.framelayout.FrameLayoutActivity"></activity>
-        <activity android:name=".module.elevation.cardview.CardViewActivity"></activity>
-        <activity android:name=".module.viewflipper.ViewFlipperActivity"></activity>
-        <activity android:name=".module.contacts.ContactsActivity"></activity>
-        <activity android:name=".module.scroll.ScrollActivity"></activity>
+        <activity android:name=".module.dialog.DialogActivity" />
+        <activity android:name=".module.TestActivity" />
+        <activity android:name=".module.elevation.ElevationActivity" />
+        <activity android:name=".module.elevation.framelayout.FrameLayoutActivity" />
+        <activity android:name=".module.elevation.cardview.CardViewActivity" />
+        <activity android:name=".module.viewflipper.ViewFlipperActivity" />
+        <activity android:name=".module.contacts.ContactsActivity" />
+        <activity android:name=".module.slideview.ScrollActivity" />
+        <activity android:name=".module.slideview.SlideViewActivity" />
+        <activity android:name=".module.slideview.ChangeLayoutActivity"></activity>
     </application>
 
 </manifest>

@@ -1,22 +1,39 @@
-package com.ruiqin.customview.module.scroll;
+package com.ruiqin.customview.module.slideview;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.ruiqin.customview.R;
 import com.ruiqin.customview.base.BaseActivity;
+import com.ruiqin.customview.util.ToastUtils;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 public class ScrollActivity extends BaseActivity {
+
+    /**
+     * 启动自身的实列
+     *
+     * @param context
+     */
+    public static void newIntance(Context context) {
+        Intent intent = new Intent(context.getApplicationContext(), ScrollActivity.class);
+        context.startActivity(intent);
+    }
 
     @BindView(R.id.button)
     ImageView button;
     float lastX = 0;
     float lastY = 0;
+    @BindView(R.id.textView)
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,5 +67,10 @@ public class ScrollActivity extends BaseActivity {
     @Override
     protected int getFragmentId() {
         return 0;
+    }
+
+    @OnClick(R.id.textView)
+    public void onViewClicked() {
+        ToastUtils.showShort("哈哈");
     }
 }
