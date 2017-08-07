@@ -1,5 +1,6 @@
 package com.ruiqin.customview.module.dialog;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -8,6 +9,7 @@ import android.view.View;
 import com.ruiqin.customview.R;
 import com.ruiqin.customview.base.BaseActivity;
 import com.ruiqin.customview.module.dialog.view.CustomDialog;
+import com.ruiqin.customview.module.dialog.view.LoadingDialog;
 import com.ruiqin.customview.util.ToastUtils;
 
 import butterknife.OnClick;
@@ -75,7 +77,7 @@ public class DialogActivity extends BaseActivity {
         mCustomDialog.show();
     }
 
-    @OnClick({R.id.btn_alertDialog, R.id.btn_custom_alertDialog})
+    @OnClick({R.id.btn_alertDialog, R.id.btn_custom_alertDialog, R.id.btn_custom_progressDialog, R.id.btn_custom_loadingDialog})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_alertDialog:
@@ -84,6 +86,38 @@ public class DialogActivity extends BaseActivity {
             case R.id.btn_custom_alertDialog:
                 showCustomAlertDialog();
                 break;
+            case R.id.btn_custom_progressDialog:
+                showLoadingDialog();
+                break;
+            case R.id.btn_custom_loadingDialog:
+                showProgressDialog();
+                break;
         }
     }
+
+
+    LoadingDialog mLoadingDialog;
+
+    /**
+     * 展示对话框
+     */
+    private void showLoadingDialog() {
+        if (mLoadingDialog == null) {
+            mLoadingDialog = new LoadingDialog(mContext);
+        }
+        mLoadingDialog.show();
+    }
+
+    ProgressDialog mProgressDialog;
+
+    /**
+     * 展示对话框
+     */
+    private void showProgressDialog() {
+        if (mProgressDialog == null) {
+            mProgressDialog = new ProgressDialog(mContext);
+        }
+        mProgressDialog.show();
+    }
+
 }

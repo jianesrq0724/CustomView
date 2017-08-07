@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ruiqin.customview">
+          package="com.ruiqin.customview">
 
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:name=".App"
@@ -14,21 +14,23 @@
         android:theme="@style/AppTheme">
         <activity android:name=".module.home.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".module.dialog.DialogActivity" />
-        <activity android:name=".module.TestActivity" />
-        <activity android:name=".module.elevation.ElevationActivity" />
-        <activity android:name=".module.elevation.framelayout.FrameLayoutActivity" />
-        <activity android:name=".module.elevation.cardview.CardViewActivity" />
-        <activity android:name=".module.viewflipper.ViewFlipperActivity" />
-        <activity android:name=".module.contacts.ContactsActivity" />
-        <activity android:name=".module.slideview.ScrollActivity" />
-        <activity android:name=".module.slideview.SlideViewActivity" />
-        <activity android:name=".module.slideview.ChangeLayoutActivity"></activity>
+        <activity android:name=".module.dialog.DialogActivity"/>
+        <activity android:name=".module.TestActivity"/>
+        <activity android:name=".module.elevation.ElevationActivity"/>
+        <activity android:name=".module.elevation.framelayout.FrameLayoutActivity"/>
+        <activity android:name=".module.elevation.cardview.CardViewActivity"/>
+        <activity android:name=".module.viewflipper.ViewFlipperActivity"/>
+        <activity android:name=".module.contacts.ContactsActivity"/>
+        <activity android:name=".module.slideview.ScrollActivity"/>
+        <activity android:name=".module.slideview.SlideViewActivity"/>
+        <activity android:name=".module.slideview.ChangeLayoutActivity"/>
+        <activity android:name=".module.draw.DrawActivity">
+        </activity>
     </application>
 
 </manifest>

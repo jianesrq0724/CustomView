@@ -2,6 +2,7 @@ package com.ruiqin.customview.module.home;
 
 import com.ruiqin.customview.module.contacts.ContactsActivity;
 import com.ruiqin.customview.module.dialog.DialogActivity;
+import com.ruiqin.customview.module.draw.DrawActivity;
 import com.ruiqin.customview.module.elevation.ElevationActivity;
 import com.ruiqin.customview.module.home.bean.MainRecyclerData;
 import com.ruiqin.customview.module.slideview.SlideViewActivity;
@@ -24,6 +25,7 @@ public class MainModel implements MainContract.Model {
         recyclerDataList.add(new MainRecyclerData("ViewFlipperActivity", ViewFlipperActivity.class));
         recyclerDataList.add(new MainRecyclerData("ContactsActivity", ContactsActivity.class));
         recyclerDataList.add(new MainRecyclerData("SlideViewActivity", SlideViewActivity.class));
+        recyclerDataList.add(new MainRecyclerData("DrawActivity", DrawActivity.class));
         return recyclerDataList;
     }
 }
