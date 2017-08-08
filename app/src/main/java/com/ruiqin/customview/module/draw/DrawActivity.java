@@ -11,11 +11,11 @@ public class DrawActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_draw);
-
     }
 
     @Override
     protected int getFragmentId() {
         return 0;
     }
+
 }
