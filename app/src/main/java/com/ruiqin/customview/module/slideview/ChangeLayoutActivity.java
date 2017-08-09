@@ -30,8 +30,6 @@ public class ChangeLayoutActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_layout);
         getLayoutSize();
-
-
         mImageView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -40,23 +38,19 @@ public class ChangeLayoutActivity extends BaseActivity {
 //                        mImageView.layout(300, 300, 300 + mImageViewWidth, 300 + mImageViewHeight);
                         break;
                     case MotionEvent.ACTION_MOVE:
-//                        int l = (int) event.getRawX();
-//                        int t = (int) event.getRawY();
-
-                        LogUtils.e("l: " + "l"+ ", t : " + "t");
-
-//                        int r = l + mImageViewWidth;
-//                        int b = t + mImageViewHeight;
-//                        mImageView.layout(l, t, r, b);
+                        int l = (int) event.getRawX();
+                        int t = (int) event.getRawY();
+                        int r = l + mImageViewWidth;
+                        int b = t + mImageViewHeight;
+                        mImageView.layout(l, t, r, b);
                         break;
                     case MotionEvent.ACTION_UP:
                         break;
                 }
-                return false;
+                return true;
             }
         });
     }
-
 
     private int mImageViewWidth;
     private int mImageViewHeight;
