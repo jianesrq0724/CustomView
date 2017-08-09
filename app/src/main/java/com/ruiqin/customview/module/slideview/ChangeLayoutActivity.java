@@ -29,20 +29,22 @@ public class ChangeLayoutActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_layout);
-        getLayoutSize();
+//        getLayoutSize();
         mImageView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-//                        mImageView.layout(300, 300, 300 + mImageViewWidth, 300 + mImageViewHeight);
                         break;
                     case MotionEvent.ACTION_MOVE:
-                        int l = (int) event.getRawX();
-                        int t = (int) event.getRawY();
+                        int l = (int) event.getX();
+                        int t = (int) event.getY();
                         int r = l + mImageViewWidth;
                         int b = t + mImageViewHeight;
-                        mImageView.layout(l, t, r, b);
+
+                        LogUtils.e(l + ", " + t + ", " + r + ", " + b);
+
+//                        mImageView.layout(l, t, r, b);
                         break;
                     case MotionEvent.ACTION_UP:
                         break;
