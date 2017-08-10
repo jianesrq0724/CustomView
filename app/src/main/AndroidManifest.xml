@@ -31,6 +31,8 @@
         <activity android:name=".module.slideview.ChangeLayoutActivity"/>
         <activity android:name=".module.draw.DrawActivity">
         </activity>
+        <activity android:name=".module.test.TestActivity">
+        </activity>
     </application>
 
 </manifest>
