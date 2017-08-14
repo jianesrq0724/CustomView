@@ -7,3 +7,4 @@
  
 # [关于自定义Dialog请看这篇文章](http://blog.csdn.net/jianesrq0724/article/details/75175136)
 
+![](./gir/1.png)
